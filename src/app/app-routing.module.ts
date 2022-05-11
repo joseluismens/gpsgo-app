@@ -1,16 +1,19 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
-import { ClientesComponent } from './components/clientes/clientes.component';
-import { InicioComponent } from './components/inicio/inicio.component';
-import { LoginComponent } from './components/login/login.component';
+
 
 const routes: Routes = [
+ 
   {
-    path: '',component:LoginComponent
+    path: '',
+    loadChildren: () => import('./pages/login/login.module').then( m => m.LoginPageModule)
   },
   {
-    path: 'clientes',component:ClientesComponent
+    path: 'intro',
+    loadChildren: () => import('./pages/intro/intro.module').then( m => m.IntroPageModule)
   },
+ 
+ 
 
 ];
 
