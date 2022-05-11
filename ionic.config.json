@@ -1,0 +1,7 @@
+{
+  "name": "gpsgo-app",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
