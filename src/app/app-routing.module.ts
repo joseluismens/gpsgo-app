@@ -1,16 +1,16 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { ClientesComponent } from './components/clientes/clientes.component';
+import { InicioComponent } from './components/inicio/inicio.component';
 
 const routes: Routes = [
   {
-    path: '',
-    redirectTo: 'folder/Inbox',
-    pathMatch: 'full'
+    path: '',component:InicioComponent
   },
   {
-    path: 'folder/:id',
-    loadChildren: () => import('./folder/folder.module').then( m => m.FolderPageModule)
-  }
+    path: 'clientes',component:ClientesComponent
+  },
+
 ];
 
 @NgModule({
