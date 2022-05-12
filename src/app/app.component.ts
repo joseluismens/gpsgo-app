@@ -12,8 +12,11 @@ export class AppComponent  {
     
   }
   ngOnInit() {
-    this.menuCtrl.enable(false);
+
+    //this.menuCtrl.enable(true);
   
   }
-  
+  closeMenu() {
+    this.menuCtrl.close();
+  }
 }
