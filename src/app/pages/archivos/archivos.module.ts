@@ -4,17 +4,17 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { IntroPageRoutingModule } from './intro-routing.module';
+import { ArchivosPageRoutingModule } from './archivos-routing.module';
 
-import { IntroPage } from './intro.page';
+import { ArchivosPage } from './archivos.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    IntroPageRoutingModule
+    ArchivosPageRoutingModule
   ],
-  declarations: [IntroPage]
+  declarations: [ArchivosPage]
 })
-export class IntroPageModule {}
+export class ArchivosPageModule {}

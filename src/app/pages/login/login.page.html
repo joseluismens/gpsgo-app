@@ -2,17 +2,27 @@
 <ion-content>
   <form id="content">
     <ion-item lines="full">
-      <ion-label position="floating">Email</ion-label>
-      <ion-input type="text" required></ion-input>
+      <ion-label position="floating"  name="usuario">Usuario</ion-label>
+      <ion-input 
+          type="text"
+          [(ngModel)]="usuario"
+          name="usuario"
+          required></ion-input>
     </ion-item>
     <ion-item lines="full">
       <ion-label position="floating">Password</ion-label>
-      <ion-input type="password" required></ion-input>
+      <ion-input type="password"
+      [(ngModel)]="contrasena"
+      name="contrasena"
+      required></ion-input>
+    
     </ion-item>
     <ion-row>
       <ion-col>
-        <ion-button type="submit" color="primary" expand="block">Sign In</ion-button>
+        <ion-button type="submit" color="primary" expand="block" (click)="ingresar()">Sign In</ion-button>
       </ion-col>
     </ion-row>
   </form>
 </ion-content>
+
+

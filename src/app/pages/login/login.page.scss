@@ -6,3 +6,25 @@
 
    background-color:gray !important;
 }
+page-login {
+
+    font-family: 'Avenir', sans-serif;
+    @import url(//fonts.googleapis.com/css?family=Lato:300:400);
+  
+    .btn_eye_icon{
+            position: absolute;
+            right: 0;
+            bottom: 4px;
+            background: transparent;
+            ion-icon{
+                font-size: 22px;
+                color:#757575;
+            }
+        }
+  
+        .btn_eye_icon:focus{
+            outline: none  !important;
+        }
+        
+  }
+  
