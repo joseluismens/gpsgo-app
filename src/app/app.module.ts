@@ -20,7 +20,7 @@ import { IonicStorageModule } from '@ionic/storage-angular';
     HttpClientModule,
     FormsModule,
     IonicStorageModule.forRoot(),
-    RouterModule
+    RouterModule,
   
     
 

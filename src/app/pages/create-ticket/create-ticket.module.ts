@@ -13,7 +13,8 @@ import { CreateTicketPage } from './create-ticket.page';
     CommonModule,
     FormsModule,
     IonicModule,
-    CreateTicketPageRoutingModule
+    CreateTicketPageRoutingModule,
+
   ],
   declarations: [CreateTicketPage]
 })

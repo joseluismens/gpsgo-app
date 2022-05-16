@@ -1,0 +1,45 @@
+.content-panel{
+    margin-top: 50%;
+}
+#ticket{
+    background-color: white;
+    color: #263a55;
+    font-weight: 600;
+    border: 0.5px solid #263a55;
+    padding: 10px;
+    border-radius: 5px;
+    width: 80%;
+}
+ion-col{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+#informacion{
+    background-color: #263a55;
+    color: white;
+    height: 45px;
+    text-align: left;
+    font-weight: 600;
+    font-size: 20px;
+    padding: 10px 10px;
+    border-radius: 5px;
+    width: 80%;
+}
+#informacion > ion-icon{
+    float: right;
+    font-size: 24px !important;
+    
+}
+.boton-md{
+    height: 50px;
+    width: 80%;
+    background-color: #263a55;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 16px;
+
+    
+
+    color: white;
+}

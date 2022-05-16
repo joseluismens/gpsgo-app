@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient,HttpHeaders } from "@angular/common/http";
 import { map } from 'rxjs/operators'
-import { AlertController, Platform } from "@ionic/angular";
+import { AlertController, MenuController } from "@ionic/angular";
 import { Usuario } from "../interfaces/usuario";
 import { Storage } from '@ionic/storage-angular';
 import { Router } from '@angular/router';
@@ -17,7 +17,11 @@ export class LoginService {
   httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
   };
-  constructor(private http: HttpClient, private alertController: AlertController, private storage: Storage, private router: Router) { }
+  constructor(private http: HttpClient,
+              private alertController: AlertController, 
+              private storage: Storage, 
+              private router: Router,
+              private menuController:MenuController) { }
 
   async presentAlert() {
     const alert = await this.alertController.create({
@@ -74,6 +78,8 @@ export class LoginService {
 
 
           this.guardar_usuario(this.user);
+          this.menuController.enable(false);
+
           this.router.navigate(['/clientes']);
 
         } else {

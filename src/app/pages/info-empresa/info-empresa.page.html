@@ -1,0 +1,172 @@
+<ion-header class="ion-no-border">
+  <img
+    style="position: relative; top: 7px; left: 22px"
+    width="24px"
+    src="https://play-lh.googleusercontent.com/Gi79ud50Ud77P_uGiAMWfCn3u5S6eJ6Gt-PJ836xbgncUxkr_GvBE2tEzY7_tJQyvdM"
+    alt=""
+  />
+  <span
+    padding
+    style="font-size: 12px; color: #263a55; margin: 10px; margin-left: 30px"
+    *ngIf="cliente"
+    >{{cliente.cod_ejec_venta}} - {{cliente.ejecutivo}}
+  </span>
+  <br />
+  <div
+    padding
+    style="color: #263a55; margin-top: 10px; margin-left: 5px"
+    *ngIf="cliente"
+  >
+    <b style="font-size: 25px">{{cliente.nombre}}</b>
+  </div>
+</ion-header>
+
+<ion-content>
+  <ion-card
+    style="padding: 10px; background: #263a55; color: white"
+    color="general"
+  >
+    <ion-card-title>
+      <b>Información de la Empresa</b>
+    </ion-card-title>
+    <ul>
+      <li>
+        <span *ngIf="cliente.nombre != ''"
+          ><b>» Nombre:</b> {{cliente.nombre}} <br
+        /></span>
+      </li>
+      <li>
+        <span *ngIf="cliente.giro != ''"
+          ><b>» Giro:</b> {{cliente.giro}} <br
+        /></span>
+      </li>
+      <li>
+        <span *ngIf="cliente.direccion != ''"
+          ><b>» Direccion:</b> {{cliente.direccion}} <br
+        /></span>
+      </li>
+      <li>
+        <span *ngIf="cliente.ciudad != ''"
+          ><b>» Ciudad:</b> {{cliente.ciudad}} <br
+        /></span>
+      </li>
+      <li>
+        <span *ngIf="cliente.comuna != ''"
+          ><b>» Comuna:</b> {{cliente.comuna}} <br
+        /></span>
+      </li>
+      <li>
+        <span *ngIf="cliente.region != ''"
+          ><b>» Region:</b> {{cliente.region}} <br
+        /></span>
+      </li>
+      <li>
+        <span *ngIf="cliente.rut != ''"
+          ><b>» Rut:</b> {{cliente.rut}} <br
+        /></span>
+      </li>
+      <li>
+        <span *ngIf="cliente.rep_legal != ''"
+          ><b>» Rep. Legal:</b> {{cliente.rep_legal}} <br
+        /></span>
+      </li>
+      <li>
+        <span *ngIf="cliente.tel_movil != ''"
+          ><b>» Tel. Movil:</b> {{cliente.tel_movil}} <br
+        /></span>
+      </li>
+      <li>
+        <span *ngIf="cliente.email != ''"
+          ><b>» Email:</b> {{cliente.email}} <br
+        /></span>
+      </li>
+      <li>
+        <span *ngIf="cliente.fecha_ingreso != ''"
+          ><b>» Fecha Ingreso:</b> {{cliente.fecha_ingreso}} <br
+        /></span>
+      </li>
+
+      <li>
+        <span *ngIf="cliente.fecha_pago != ''"
+          ><b>» Fecha Pago:</b> {{cliente.fecha_pago}} <br
+        /></span>
+      </li>
+    </ul>
+    <hr />
+  </ion-card>
+  <ion-card
+    style="padding: 10px; background: #263a55; color: white"
+    color="general"
+  >
+    <ion-card-title>
+      <b>Información de Facturación</b>
+    </ion-card-title>
+    <ul>
+      <li>
+        <span *ngIf="cliente.email_facturacion!= ''"
+          ><b>» Email facturación:</b> {{cliente.email_facturacion}} <br
+        /></span>
+      </li>
+      <li>
+        <span *ngIf="cliente.pago_proveedores != ''"
+          ><b>» Pago proveedores:</b> {{cliente.pago_proveedores}} <br
+        /></span>
+      </li>
+      <li>
+        <span *ngIf="cliente.telefono_pago_prov != ''"
+          ><b>» Telefono pago prov:</b> {{cliente.telefono_pago_prov}} <br
+        /></span>
+      </li>
+      <li>
+        <span *ngIf="cliente.email_pago_prov != ''"
+          ><b>» Email pago prov:</b> {{cliente.email_pago_prov}} <br
+        /></span>
+      </li>
+      <li>
+        <span *ngIf="cliente.valor_mensualidad != ''"
+          ><b>» Valor mensualidad:</b> {{cliente.valor_mensualidad}} <br
+        /></span>
+      </li>
+      <li>
+        <span *ngIf="cliente.region != ''"
+          ><b>» Region:</b> {{cliente.region}} <br
+        /></span>
+      </li>
+     
+      
+    </ul>
+    <hr />
+  </ion-card>
+  <ion-card
+    style="padding: 10px; background: #263a55; color: white"
+    color="general"
+  >
+    <ion-card-title>
+      <b>Información de Tecnica</b>
+    </ion-card-title>
+    <ul>
+      <li>
+        <span *ngIf="cliente.contacto_tecnico!= ''"
+          ><b>» Contacto tecnico:</b> {{cliente.contacto_tecnico}} <br
+        /></span>
+      </li>
+      <li>
+        <span *ngIf="cliente.telefono_tecnico != ''"
+          ><b>» Telefono tecnico:</b> {{cliente.telefono_tecnico}} <br
+        /></span>
+      </li>
+      <li>
+        <span *ngIf="cliente.email_tecnico != ''"
+          ><b>» Email tecnico:</b> {{cliente.email_tecnico}} <br
+        /></span>
+      </li>
+      
+     
+      
+    </ul>
+    <hr />
+  </ion-card>
+</ion-content>
+<ion-footer>
+<ion-button (click)="dismiss()" expand="block" color="primary">Volver</ion-button>
+</ion-footer>

@@ -4,6 +4,8 @@ import { Observable } from 'rxjs';
 import { Storage } from '@ionic/storage-angular';
 import { map } from 'rxjs/operators';
 import { URL } from "../variables";
+import { Usuario } from '../interfaces/usuario';
+import { Cliente } from '../interfaces/ICliente';
 @Injectable({
   providedIn: 'root'
 })
@@ -15,10 +17,15 @@ export class ClienteService {
     
   }
 
-  clientes_spa(){
-    return this.http.get(`${URL}clientes_spa`);
+  clientes_spa():Observable<Cliente[]>{
+    return this.http.get<Cliente[]>(`${URL}clientes_spa`);
   }
-  
+  clientes_limitada(){
+    return this.http.get(`${URL}clientes_ltda`);
+  }
+  getUsuarios(){
+    return this.http.get(`${URL}usuarios`);
+  }
   async getId(){
      return   await this.storage.get("id").then((val)=>{ 
       return val;
@@ -44,8 +51,12 @@ export class ClienteService {
   }
   getTicketsRelizados (usuario){
      
-    return this.http.get(`${URL}tickets-realizados/${usuario}`);
+    return this.http.get<Usuario>(`${URL}tickets-realizados/${usuario}`);
   
+  }
+  getInfoCliente(id:string){
+    return this.http.get(`${URL}info-cliente/${id}`);
+
   }
 
 }
