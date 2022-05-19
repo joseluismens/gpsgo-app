@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { ModalController } from '@ionic/angular';
 
 @Component({
   selector: 'app-ticket-detalle',
@@ -6,10 +7,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./ticket-detalle.page.scss'],
 })
 export class TicketDetallePage implements OnInit {
+  @Input() ticket:any;
+  constructor(private modalController:ModalController) {
 
-  constructor() { }
+    
+   }
 
   ngOnInit() {
+  }
+  back() {
+    
+    this.modalController.dismiss({
+      'dismissed': true
+    });
   }
 
 }

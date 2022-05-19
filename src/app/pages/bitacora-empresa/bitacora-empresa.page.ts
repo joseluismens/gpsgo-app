@@ -50,7 +50,7 @@ export class BitacoraEmpresaPage implements OnInit {
   }else{
     this.clienteService.crearTicket(this.comentario,this.ticket,this.destinatario, this.cliente.codigo_abonado,this.enviada_por).subscribe((res:any)=>{
       if (res.creado==="si"){
-         toast.message= "ticket Creado";
+         toast.message= res.message
          toast.color="success";
          toast.icon= "checkmark-circle";
          this.modalController.dismiss();
