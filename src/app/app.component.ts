@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { MenuController } from '@ionic/angular';
 import { Storage } from '@ionic/storage-angular';
+import { ClienteService } from './services/cliente.service';
 import { LoginService } from './services/login.service';
 
 @Component({
@@ -11,13 +12,21 @@ import { LoginService } from './services/login.service';
 })
 export class AppComponent  {
    codigo:string;
-  constructor(public menuCtrl:MenuController, private storage:Storage, private router:Router, private loginService:LoginService) {
-      
+   nombre:string;
+   apellido:string;
+  constructor(public menuCtrl:MenuController, private storage:Storage, private router:Router, private loginService:LoginService, private clienteService: ClienteService) {
+    this.storage.create();
+
+    this.clienteService.getNombre().then((data:any)=>{
+        this.nombre = data; 
+    });
+    this.clienteService.getApellido().then((data:any)=>{
+      this.apellido = data; 
+  });
   }
   ngOnInit() {
 
-    //this.menuCtrl.enable(true);
-    this.storage.create();
+
     
   }
   

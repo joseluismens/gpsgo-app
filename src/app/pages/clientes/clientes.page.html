@@ -1,9 +1,9 @@
-<ion-toolbar color="bluedark">
+<ion-toolbar color="general">
         <ion-icon slot="start" color="light" name="people-outline"  size="large"></ion-icon>
         <ion-title color="light">Clientes</ion-title>
 </ion-toolbar>
-<ion-toolbar>
-    <ion-searchbar #search animated (ionChange)="clienteChange($event)"></ion-searchbar>
+<ion-toolbar >
+    <ion-searchbar #search animated (ionChange)="clienteChange($event)" style="margin-top: 15px;"></ion-searchbar>
 
 </ion-toolbar>
 <ion-content>
@@ -15,4 +15,4 @@
     </ion-list>
 
 </ion-content>
-<
+

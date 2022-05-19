@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MenuController } from '@ionic/angular';
 import { ClienteService } from 'src/app/services/cliente.service';
 
 @Component({
@@ -9,7 +10,8 @@ import { ClienteService } from 'src/app/services/cliente.service';
 export class CuentaPage implements OnInit {
   info_usuario: any;
   codigo:string
-  constructor(private clienteService:ClienteService) { 
+  constructor(private clienteService:ClienteService, private menuController:MenuController) {
+    this.menuController.close(); 
     this.clienteService.getId().then((val)=>{
       console.log(val);
       this.codigo = val;

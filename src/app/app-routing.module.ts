@@ -56,6 +56,22 @@ const routes: Routes = [
     path: 'info-empresa',
     loadChildren: () => import('./pages/info-empresa/info-empresa.module').then( m => m.InfoEmpresaPageModule)
   },
+  {
+    path: 'usuario-empresa',
+    loadChildren: () => import('./pages/usuario-empresa/usuario-empresa.module').then( m => m.UsuarioEmpresaPageModule)
+  },
+  {
+    path: 'movil-empresa',
+    loadChildren: () => import('./pages/movil-empresa/movil-empresa.module').then( m => m.MovilEmpresaPageModule)
+  },
+  {
+    path: 'herramientas-empresa',
+    loadChildren: () => import('./pages/herramientas-empresa/herramientas-empresa.module').then( m => m.HerramientasEmpresaPageModule)
+  },
+  {
+    path: 'bitacora-empresa',
+    loadChildren: () => import('./pages/bitacora-empresa/bitacora-empresa.module').then( m => m.BitacoraEmpresaPageModule)
+  },
 
  
  

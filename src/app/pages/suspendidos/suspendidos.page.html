@@ -1,9 +1,17 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>suspendidos</ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-toolbar color="danger" >
+  <ion-title >Suspendidos</ion-title>
+</ion-toolbar>
+<ion-toolbar >
+<ion-searchbar #search animated (ionChange)="suspendidosChange($event)" style="margin-top: 15px;"></ion-searchbar>
 
+</ion-toolbar>
 <ion-content>
 
+<ion-list>
+  <ion-item *ngFor="let cliente of clientes" [routerLink]="['/info-cliente/'+cliente.codigo_abonado]">
+      <ion-label>  {{cliente.codigo_abonado }} - {{cliente.nombre}}</ion-label>
+  </ion-item>
+</ion-list>
+
 </ion-content>
+

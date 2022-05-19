@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="back()">
+        <ion-icon name="arrow-back-outline" color="general"></ion-icon>
+      </ion-button>
+      <ion-text color="general"> Moviles</ion-text> 
+    </ion-buttons>
+  </ion-toolbar>
+  <ion-searchbar></ion-searchbar>
+</ion-header>
+
+
+
+<ion-content>
+  <ion-item-group>
+
+    <ion-item style="border-radius: 15px 15px 15px 15px;" *ngFor="let item of moviles" style="margin:5px;">
+      <span style="font-size:12px"><b>Patente:</b> {{item.patente}} 
+      <b *ngIf="item.patente == null">n/a</b> <br>
+      <b>avl:</b> {{item.avl}} <b *ngIf="item.avl == null">n/a</b><br>
+      <b>F.Instalacion:</b> {{item.fecha_instalacion | date:'d-MM-Y'}} <b *ngIf="item.fecha_instalacion == null">n/a</b>
+    </span>
+      <ion-button  slot="end" *ngIf="item.status == '1'"  color="dark" style="font-size: 16px;">
+        <ion-icon name="car" style="margin-right: 5px"></ion-icon></ion-button>
+      <ion-button  slot="end" *ngIf="item.status != '1'"  color="danger" style="font-size: 16px">
+        <ion-icon name="car" style="margin-right: 5px"></ion-icon></ion-button>
+    </ion-item>
+    <div *ngIf="moviles.length==0" id="sin_moviles"> Sin Moviles</div>
+  </ion-item-group>
+</ion-content>

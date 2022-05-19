@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="back()">
+        <ion-icon name="arrow-back-outline" color="general"></ion-icon>
+      </ion-button>
+      <ion-text color="general"> Bitcoras y Ticket</ion-text>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>    
+
+  <ion-card >
+    <ion-label position="stacked">Comentario:</ion-label>
+    <ion-input type="text" [(ngModel)]="comentario" color="dark"></ion-input>
+  </ion-card>
+
+    <br>
+  <ion-card >
+    <ion-label style="font-size: 12px">Seleccione destinatario</ion-label>
+    <ion-select [(ngModel)]="destinatario">
+      <ion-select-option
+        *ngFor="let usuario of usuarios"
+        [value]="usuario.usuario"
+        >{{usuario.nombres | titlecase}} {{usuario.apellidos    | titlecase}}</ion-select-option
+      >
+    </ion-select>
+  </ion-card>
+  
+  <ion-card >
+    <h2 style="color: #263a55;"><strong>&nbsp;¿Es Ticket?</strong></h2>
+      <ion-label style="font-size: 12px">Responda</ion-label>
+      <ion-select [(ngModel)]="ticket">
+          <ion-select-option value="si">Si</ion-select-option>
+          <ion-select-option value="no">No</ion-select-option>
+      </ion-select>
+    </ion-card>
+</ion-content>
+
+<ion-footer no-border>
+    <ion-button  expand="block" color="primary" (click)="enviar()">Enviar</ion-button>
+
+  </ion-footer>

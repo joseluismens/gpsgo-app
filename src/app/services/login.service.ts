@@ -60,14 +60,14 @@ export class LoginService {
         const   { nombres, apellidos, codigo_venta, nivel1, img_perfil, id,  usuario} = resp.usuario;
 
         if (nivel1 === "Venta" || nivel1 === "Administracion" || nivel1 == "Soporte" || nivel1 == "Cobranza") {
-            let codigo ;
+            let codigo:string ;
           if (nivel1 === "Administracion" || nivel1 == "Soporte" || nivel1 == "Cobranza") {
             codigo = "000";
           } else {
             codigo = codigo_venta;
           }
 
-
+          this.user.codigo=codigo;
           this.user.nombres = nombres;
           this.user.apellidos = apellidos;
           this.user.id = id;
@@ -121,12 +121,7 @@ export class LoginService {
     });
   }
 
-  obtenerTicketsPendientes() {
-
-
-
-
-  }
+ 
 
 
 

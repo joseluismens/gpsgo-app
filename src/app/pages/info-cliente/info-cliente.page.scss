@@ -1,5 +1,5 @@
 .content-panel{
-    margin-top: 50%;
+    margin-top: 25%;
 }
 #ticket{
     background-color: white;
@@ -8,7 +8,12 @@
     border: 0.5px solid #263a55;
     padding: 10px;
     border-radius: 5px;
-    width: 80%;
+    font-size: 16px;
+    width: 91%;
+    height: 50px;
+    margin-bottom: 20px;
+
+
 }
 ion-col{
    display: flex;
@@ -18,28 +23,51 @@ ion-col{
 #informacion{
     background-color: #263a55;
     color: white;
-    height: 45px;
+    height: 50px;
     text-align: left;
     font-weight: 600;
     font-size: 20px;
     padding: 10px 10px;
     border-radius: 5px;
-    width: 80%;
+    width: 91%;
 }
 #informacion > ion-icon{
     float: right;
     font-size: 24px !important;
     
 }
+
 .boton-md{
-    height: 50px;
-    width: 80%;
+    height: 70px;
+    width: 50%;
     background-color: #263a55;
     border-radius: 5px;
     font-weight: 600;
     font-size: 16px;
-
-    
-
     color: white;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.iconos{
+    margin-right: 10px;
+    font-size:35px;
+    margin-top: -5px;
+}
+#herramientas{
+    width: 80%;
+    height: 50px;
+    background-color: white;
+    color: #263a55;
+    font-weight: 600;
+    border: 0.5px solid #263a55;
+    padding: 10px;
+    margin-top: 20px;
+    margin: 5%;
+    border-radius: 5px;
+    font-size: 20x;
+}
+
+#herramientas > ion-icon{
+    font-size: 16px;
+    margin-right: 5px;
 }

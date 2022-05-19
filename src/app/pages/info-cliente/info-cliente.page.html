@@ -1,6 +1,6 @@
-<ion-header class="ion-no-border"> 
-  <span padding style="font-size:12px;color:#263A55; margin: 10px;" *ngIf="cliente">{{cliente.cod_ejec_venta}} - {{cliente.ejecutivo}} </span> <br>
-  <div padding style="color:#263A55; margin-top: 10px; margin-left: 5px;" *ngIf="cliente"><b style="font-size:25px;">{{cliente.nombre}}</b></div>
+<ion-header class="ion-no-border" style="margin-top:30px; margin-left: 10px;"> 
+  <span padding style="font-size:12px;color:#263A55;" *ngIf="cliente">{{cliente.cod_ejec_venta}} - {{cliente.ejecutivo}} </span> <br>
+  <div padding style="color:#263A55;" *ngIf="cliente"><b style="font-size:25px;">{{cliente.nombre}}</b></div>
 
 
 
@@ -12,7 +12,7 @@
 
   <ion-row>
     <ion-col>
-      <button  id="ticket">
+      <button  id="ticket" (click)="bitacoraModal()">
         <ion-icon name="bookmarks-outline" style="font-size:16px ; margin:0; padding:0;margin-top:-3px;margin-left: 5px;" ></ion-icon>
         BITACORA Y TICKET </button>
 
@@ -27,25 +27,28 @@
     </ion-col>
   </ion-row>
   <ion-row>
-    <ion-col >
-      <button class="boton-md" style="margin-left:20% ;">Usuarios</button>
+    <ion-col class="boton-md" style="margin-left:5%;margin-right: 5px;" (click)="usuariosModal()">
+      <ion-icon name="people-outline" class="iconos" ></ion-icon>
+        Usuarios
 
     </ion-col>
-    <ion-col >
-      <button class="boton-md" style="margin-left:-20%">Moviles</button>
+    <ion-col class="boton-md" style="margin-right:5% ;" (click)="movilesModal()">
+      <ion-icon name="car-outline" class="iconos"></ion-icon>
+        Moviles 
     </ion-col>
 
   </ion-row>
 
   <ion-row>
-    <ion-col>
-      <ion-button (click)="infoModal()" expand="full">HERRAMIENTAS</ion-button>
-
+    <ion-col id="herramientas" >
+      <ion-icon name="hammer-outline"></ion-icon>
+        HERRAMIENTAS
     </ion-col>
   </ion-row>
 </div>
   
-
-
 </ion-content>
+<ion-footer>
+  <ion-button [routerLink]="['/clientes']" expand="block" color="primary">Volver</ion-button>
+  </ion-footer>
 

@@ -1,0 +1,12 @@
+.sombraTarjeta {
+  z-index: 5;
+  position: relative;
+  top: 10px;
+  margin-left: 2%;
+  margin-right: 2%;
+  border-radius: 5px;
+  -webkit-box-shadow: 13px 8px 21px -5px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 13px 8px 21px -5px rgba(0, 0, 0, 0.15);
+  box-shadow: 13px 8px 21px -5px rgba(0, 0, 0, 0.15);
+}
+

@@ -1,4 +1,23 @@
-<ion-content>
+<ion-header>
+  <ion-toolbar>
+  
+      <ion-text color="general" style="margin-left: 20px;"> Tickets Pendientes</ion-text> 
+  </ion-toolbar>
+  <ion-searchbar #search animated (ionChange)="ticketChange($event)"></ion-searchbar>
+</ion-header>
 
-  {{tickets | json }}
+
+<ion-content>
+  <ion-list>
+      <ion-item *ngFor="let item of searchItem " style="margin: 2%;">
+        <span style="font-size: 10px;"><b>Id:</b>{{item.id_ticket}} <br>
+              <b>Abonado:</b>{{item.codigo_abonado}} <br>
+              <b>Enviado por </b> <span *ngIf="item.usuario !=null">{{item.usuario}}</span><br>
+              <b>Fecha:</b> {{item.fecha_ingreso | date:"d-MM-Y"}}
+          </span>
+          <ion-button color="success" slot="end" style="font-size: 12px;"> <ion-icon name="information-circle-outline"></ion-icon></ion-button>
+          <ion-button color="warning" slot="end" style="font-size: 12px;margin-left: 10px;"> <ion-icon name="create-outline"></ion-icon></ion-button>
+
+      </ion-item>
+  </ion-list>
 </ion-content>

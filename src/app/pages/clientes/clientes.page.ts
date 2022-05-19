@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { IonSearchbar, LoadingController } from '@ionic/angular';
+import { IonSearchbar, LoadingController, MenuController } from '@ionic/angular';
 import { Cliente } from 'src/app/interfaces/ICliente';
 import { ClienteService } from 'src/app/services/cliente.service';
 
@@ -12,8 +12,10 @@ export class ClientesPage implements OnInit {
   clientes:Cliente[];
   @ViewChild('search',{static:false}) search:IonSearchbar;
    searchItem: Cliente[];
-  constructor(private clienteService:ClienteService, private loadingController: LoadingController) { 
+  constructor(private clienteService:ClienteService, private loadingController: LoadingController, private menuController:MenuController) { 
+      this.menuController.close();
       this.presentLoading();
+
   }
   
   ngOnInit() {

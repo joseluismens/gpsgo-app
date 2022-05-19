@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="back()">
+        <ion-icon name="arrow-back-outline" color="general"></ion-icon>
+      </ion-button>
+      <ion-text color="general"> Usuarios</ion-text> 
+    </ion-buttons>
+  </ion-toolbar>
+  <ion-searchbar></ion-searchbar>
+</ion-header>
+
+
+
+
+<ion-content>
+  <ion-item-group>
+    <ion-item *ngFor="let usuario of accesos" style="padding:5px; margin-bottom:5px">
+      <span style="font-size: 13px">
+        {{ usuario.nombre }} <br />
+        <b>usuario:</b> {{ usuario.login }} <br />
+        <b>contraseña:</b> {{ usuario.password }}
+      </span>
+      <ion-button *ngIf="usuario.status == '1'" slot="end" color="success"><ion-icon name="globe-outline"></ion-icon></ion-button>
+      <ion-button *ngIf="usuario.status == '1'"slot="end" color="tertiary" style="margin-left: 10px;"><ion-icon name="share-social-outline"></ion-icon></ion-button>
+      <ion-button *ngIf="usuario.status != '1'" ion-buttonslot="end" color="danger"><ion-icon name="cloud-offline-outline"></ion-icon></ion-button>
+    </ion-item>
+  </ion-item-group>
+  <div *ngIf="accesos.length==0" id="sin_usuarios"> Sin Usuarios</div>
+</ion-content>
